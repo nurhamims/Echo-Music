@@ -64,7 +64,7 @@ jobs:
           KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
-        run: ./gradlew assembleUniversalGmsRelease
+        run: ./gradlew assembleDebug
 
       - name: Rename and Organize APKs
         run: |
