@@ -140,10 +140,7 @@ fun AppearanceSettings(
         DynamicThemeKey,
         defaultValue = true
     )
-    val (enableLegacyIcon, onEnableLegacyIconChange) = rememberPreference(
-        iad1tya.echo.music.constants.EnableLegacyIconKey,
-        defaultValue = false
-    )
+
     val (enableHighRefreshRate, onEnableHighRefreshRateChange) = rememberPreference(
         iad1tya.echo.music.constants.EnableHighRefreshRateKey,
         defaultValue = true
