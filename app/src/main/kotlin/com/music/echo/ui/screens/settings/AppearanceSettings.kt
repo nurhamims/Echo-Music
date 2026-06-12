@@ -222,7 +222,7 @@ fun AppearanceSettings(
     )
     val (squigglySlider, onSquigglySliderChange) = rememberPreference(
         SquigglySliderKey,
-        defaultValue = false
+        defaultValue = true
     )
     val (swipeThumbnail, onSwipeThumbnailChange) = rememberPreference(
         SwipeThumbnailKey,
