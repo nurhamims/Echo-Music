@@ -1072,7 +1072,7 @@ fun AppearanceSettings(
 
         val (thumbnailCornerRadius, onThumbnailCornerRadiusChange) = rememberPreference(
             ThumbnailCornerRadiusKey,
-            defaultValue = 3f
+            defaultValue = 21f
         )
         
         var showSensitivityDialog by rememberSaveable { mutableStateOf(false) }
