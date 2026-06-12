@@ -1152,27 +1152,7 @@ fun AppearanceSettings(
                         showPlayerBackgroundDialog = true 
                     }
                 ),
-                Material3SettingsItem(
-                    icon = painterResource(R.drawable.hide_image),
-                    title = { Text(stringResource(R.string.hide_player_thumbnail)) },
-                    description = { Text(stringResource(R.string.hide_player_thumbnail_desc)) },
-                    trailingContent = {
-                        Switch(
-                            checked = hidePlayerThumbnail,
-                            onCheckedChange = onHidePlayerThumbnailChange,
-                            thumbContent = {
-                                Icon(
-                                    painter = painterResource(
-                                        id = if (hidePlayerThumbnail) R.drawable.check else R.drawable.close
-                                    ),
-                                    contentDescription = null,
-                                    modifier = Modifier.size(SwitchDefaults.IconSize)
-                                )
-                            }
-                        )
-                    },
-                    onClick = { onHidePlayerThumbnailChange(!hidePlayerThumbnail) }
-                ),
+                
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.image),
                     title = { Text(stringResource(R.string.thumbnail_corner_radius)) },
