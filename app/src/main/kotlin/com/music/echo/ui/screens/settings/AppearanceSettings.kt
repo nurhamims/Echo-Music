@@ -1000,30 +1000,8 @@ fun AppearanceSettings(
 
 
 
-                add(
-                    Material3SettingsItem(
-                        icon = painterResource(R.drawable.legacy_icon_raster),
-                        tintIcon = false,
-                        title = { Text(stringResource(R.string.legacy_icon)) },
-                        description = { Text(stringResource(R.string.legacy_icon_desc)) },
-                        trailingContent = {
-                            Switch(
-                                checked = enableLegacyIcon,
-                                onCheckedChange = { handleIconChange(it) },
-                                thumbContent = {
-                                    Icon(
-                                        painter = painterResource(
-                                            id = if (enableLegacyIcon) R.drawable.check else R.drawable.close
-                                        ),
-                                        contentDescription = null,
-                                        modifier = Modifier.size(SwitchDefaults.IconSize)
-                                    )
-                                }
-                            )
-                        },
-                        onClick = { handleIconChange(!enableLegacyIcon) }
-                    )
-                )
+            
+                
                 add(
                     Material3SettingsItem(
                         icon = painterResource(R.drawable.palette),
