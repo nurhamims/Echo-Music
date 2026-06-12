@@ -71,7 +71,6 @@ fun SettingsScreen(
     val privacyText = stringResource(R.string.privacy)
     val storageText = stringResource(R.string.storage)
     val backupText = stringResource(R.string.backup_restore)
-    val systemUpdateText = stringResource(R.string.system_update)
     val aboutText = stringResource(R.string.about)
 
     val scrollState = rememberScrollState()
@@ -202,23 +201,6 @@ fun SettingsScreen(
                         icon = painterResource(R.drawable.restore),
                         title = { Text(backupText) },
                         onClick = { navController.navigate("settings/backup_restore") }
-                    )
-                )
-            }
-            if (systemUpdateText.lowercase().contains(searchLower)) {
-                add(
-                    Material3SettingsItem(
-                        icon = painterResource(if (isUpdateAvailable) R.drawable.ic_launcher_nobg else R.drawable.update),
-                        title = { Text(systemUpdateText) },
-                        description = if (isUpdateAvailable) {
-                            {
-                                Text(
-                                    text = stringResource(R.string.update_available),
-                                    color = MaterialTheme.colorScheme.error
-                                )
-                            }
-                        } else null,
-                        onClick = { navController.navigate("settings/update") }
                     )
                 )
             }
